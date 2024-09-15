@@ -12,6 +12,6 @@ I am coding on my personal device but running computations on a remote cluster. 
 ## Using singularity
 Build container: `sudo singularity build singularity/pytorch_container.sif singularity/pytorch_container.def`
 
-Execute container with `train_classifier.py` on cluster: `singularity exec --nv ${SINGULARITY_STORAGE_DIR}/pytorch_container.sif python resnet.py`
+Execute container with `train_classifier.py` on cluster: `singularity exec --nv --bind ${PROJECT_STORAGE_DIR} ${SINGULARITY_STORAGE_DIR}/pytorch_container.sif python train_classifier.py`
 
 Remember to update helper_script/project_variables.sh with your own username etc.

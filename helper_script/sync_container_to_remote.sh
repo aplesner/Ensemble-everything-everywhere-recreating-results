@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Check that the PROJECT_NAME is sourced
-if [ "$PROJECT_NAME" != "recreating_ensemble_everything_everywhere" ]; then
+if [ "$PROJECT_NAME" != "Ensemble-everything-everywhere-recreating-results" ]; then
     echo "helper_scripts/project_variables.sh is not sourced"
     exit 1
 fi

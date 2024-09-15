@@ -2,9 +2,12 @@ Bootstrap: docker
 From: pytorch/pytorch:2.4.0-cuda12.1-cudnn9-runtime
 
 %post
+    apt-get update
+    apt-get install -y gcc
+
     # Additional setup if needed
     pip3 install --no-cache-dir --upgrade pip
-    pip3 install --no-cache-dir --upgrade scipy tqdm webdataset
+    pip3 install --no-cache-dir --upgrade scipy webdataset
 
 %environment
     export LC_ALL=C
