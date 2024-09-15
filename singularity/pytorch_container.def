@@ -1,0 +1,14 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.4.0-cuda12.1-cudnn9-runtime
+
+%post
+    # Additional setup if needed
+    pip3 install --no-cache-dir --upgrade pip
+    pip3 install --no-cache-dir --upgrade scipy tqdm webdataset
+
+%environment
+    export LC_ALL=C
+
+%runscript
+    python --version
+    echo "To run your script, use: apptainer exec pytorch_cuda.sif python /path/to/your/script.py"

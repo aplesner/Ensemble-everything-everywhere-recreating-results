@@ -1,0 +1,6 @@
+data/
+*.pt
+*.sif
+.ignore_for_code_sync
+*.tar.gz
+*.ipynb
