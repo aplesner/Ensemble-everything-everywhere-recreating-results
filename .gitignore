@@ -1,4 +1,6 @@
 data/
+__pycache__/
+*.pyc
 *.pt
 *.sif
 .ignore_for_code_sync
