@@ -164,10 +164,12 @@ def train_and_eval_classifier(
 
 def fgsm_attacks(net, inputs, labels, criterion, epsilon):
     net.eval()
-    inputs.requires_grad = True
     # net = net.to(device="cpu")
     inputs = inputs.to(device, non_blocking=True)
     labels = labels.to(device, non_blocking=True) 
+
+    inputs.requires_grad = True
+    net.zero_grad()
     
     with torch.autocast(device_type=device.type, dtype=torch.bfloat16):
         outputs = net(inputs)
