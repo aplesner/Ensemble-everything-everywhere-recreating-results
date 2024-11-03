@@ -7,7 +7,7 @@ From: pytorch/pytorch:2.4.0-cuda12.1-cudnn9-runtime
 
     # Additional setup if needed
     pip3 install --no-cache-dir --upgrade pip
-    pip3 install --no-cache-dir --upgrade scipy webdataset
+    pip3 install --no-cache-dir --upgrade scipy webdataset notebook
 
 %environment
     export LC_ALL=C
